@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <div class="start">
+          <div class="title">Calculator Brain</div>
+
+          <button id="btnstart" class="btnstart activestart" onclick="start()">
+            Start
+          </button>
+        </div>
+        <div class="stop">
+          <button
+            id="btnstop"
+            class="btnstop inactivestop"
+            onclick="stop()"
+            disabled
+          >
+            Stop
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <fieldset class="question">
+        <legend>Question</legend>
+        <span id="q1" class="q1"></span>
+
+        <span class="arrow">=></span>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>Answer</legend>
+        <input id="answerbox" type="text" disabled />
+      </fieldset>
+      <button
+        id="useranswer"
+        type="button"
+        class="ok"
+        onclick="checkanswer()"
+        disabled
+      >
+        OK
+      </button>
+    </div>
+
+    <h3 class="list">History</h3>
+    <ol id="list"></ol>
+
+    <table border="1" class="hide" id="table">
+      <tr>
+        <td id="level" colspan="3"></td>
+      </tr>
+      <tr>
+        <th>Question</th>
+        <th>Correct</th>
+        <th>Wrong</th>
+      </tr>
+      <tr>
+        <th id="q"></th>
+        <th id="c"></th>
+        <th id="w"></th>
+      </tr>
+    </table>
+  </body>
+</html>
